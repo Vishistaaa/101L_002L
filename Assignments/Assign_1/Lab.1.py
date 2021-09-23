@@ -1,4 +1,5 @@
 ########################################################################
+##
 ## CSC 101 Lab
 ## Program : Grade calculator
 ## Name : Vishista Vuppulapati
@@ -6,7 +7,6 @@
 
 ## Problem : The main aim is to take in the inputs name,lab grade,exam grade, and the attendence grade 
 ## and calculate the weighted grade and the overall grade for the particular student.
-
 
 ## Algorithm 
 
