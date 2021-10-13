@@ -1,4 +1,13 @@
-def get_school(library_card):
+########################################################################
+##
+## CSC 101 Lab
+## Program : Linda Hall
+## Name : Vishista Vuppulapati
+## Email : vvd94@umsystem.edu
+
+## Algorithm 
+
+def get_school(library_card): # Defining function and creating logic to Identify which Deparatment the student is from.
   if library_card[5] == '1':
       return "School of Computing and Engineering SCE"
   elif library_card[5] == '2':
@@ -8,7 +17,7 @@ def get_school(library_card):
   else:
       return "Invalid School"
   
-def get_grade (library_card):
+def get_grade (library_card):  # Defining function and creating logic to Identify which year the student is studying.
     if library_card[6] == '1':
         return "Freshman"
     elif library_card[6] == '2':
@@ -20,7 +29,7 @@ def get_grade (library_card):
     else:
         return "Invalid Grade"
 
-def character_value (c):
+def character_value (c): 
     value = ord(c)
     if (value >= 48 and value<=57):
         return value - 48
@@ -37,25 +46,25 @@ def get_check_digit (library_card):
 
 def verify_check_digit (library_card):
     if len(library_card) != 10:
-        return (False,"The length of the number given must be 10")
+        return (False,"The length of the number given must be 10") # warning user.
 
-#check first five characters
+# Logic to check first five characters.
     for i in range(5):
         if library_card[i] < 'A' or library_card[i] > 'Z':
             msg = "The first 5 characters must be A-Z, the invalid character is at index " + str(i) +" is " + library_card[i]
             return (False, msg)
   
-#check charactersn at index 7-9
+# Logic to check characters at index 7-9.
     for i in range(7,10):
         if library_card[i] < '0' or library_card[i] > '9':
             msg = "The last 3 characters must be 0-9, the invalid character is at index " + str(i) +" is " + library_card[i]
             return (False, msg)
 
-#check character at index 5
+# Logic to check character at index 5.
     if (library_card[5] != '1' and library_card[5] != '2' and library_card[5] != '3'):
          return (False, "The sixth character must be 1,2 or 3")
 
-#check character at index 6
+# Logic to check character at index 6.
     if (library_card[6] != '1' and library_card[6] != '2' and library_card[6] != '3' and library_card[6] != '4'):
          return (False, "The seventh character must be 1,2,3 or 4")
 
@@ -86,3 +95,5 @@ def main():
 
 if __name__=="__main__":
     main()
+
+######################################################################################
