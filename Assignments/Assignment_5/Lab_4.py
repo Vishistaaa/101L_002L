@@ -1,6 +1,6 @@
 ########################################################################
 ##
-## CSC 101 Lab
+## CSC 101 Lab week 5
 ## Program : Linda Hall
 ## Name : Vishista Vuppulapati
 ## Email : vvd94@umsystem.edu
@@ -76,7 +76,7 @@ def verify_check_digit (library_card):
         return (False,msg)
     return (True,"Library card is valid.")
 
-def main():
+def main(): 
     print("\t\t\t\tLinda Hall")
     print("\t\t\t Library Card Check")
     print("==================================================================")
@@ -94,6 +94,6 @@ def main():
             print(msg)
 
 if __name__=="__main__":
-    main()
+    main() # calling the main function.
 
 ######################################################################################
