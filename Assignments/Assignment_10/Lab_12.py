@@ -43,11 +43,11 @@ def main(): # this is where the all the above function are called
         for word in words:
             while(True):
                word = removePunctuation(word)
-               if len(word) > 3:
-                   if word not in diction:
+               if len(word) > 3: # it's checkign for the word greater than 3.
+                   if word not in diction: 
                        diction[word] = 1
                    else:
-                       diction[word] = diction[word]+1
+                       diction[word] = diction[word]+1 # appending the word to the dictionary named diction
                break
 
         sorted_dictionary = dict( sorted(diction.items()))
@@ -55,7 +55,7 @@ def main(): # this is where the all the above function are called
     count = 0
     for i in diction:
         if diction[i] == 1:
-            count += 1
+            count += 1 # incrementing the count by 1 if it exists in the dictionary.
     index = 1
     print()
     print("Most frequently used words")
@@ -63,13 +63,13 @@ def main(): # this is where the all the above function are called
     print("================================")
     for i in sorted_dictionary:
         print("{:>2}{:>15}{:>15}".format(index,i,sorted_dictionary[i]))
-
         index += 1
         if index >= 10:
             break
     print()
-    print("There are " + str(count) + " words that occur only once")
-    print("There are " + str(len(diction)) + " unique words in the document")  
+    print("There are " + str(count) + " words that occur only once") # printing/counting the number of time word occuring
+    print("There are " + str(len(diction)) + " unique words in the document")  # printing/ counting the unique (different words)
+
 main()
 
 ##########################################################################################################################
