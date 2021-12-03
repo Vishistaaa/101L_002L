@@ -27,7 +27,7 @@ class Point(object): # this was given in the assignment
         turtle.pendown() #  pendown puts the turtle's pen down and draws a line when the turtle moves.
         turtle.color(self.color) # this used to change the color of the turtle.
         turtle.setheading(0) # this is used to set the orientation of the turtle to angle. Here we are setting it to 0.
-        self.draw_action() 
+        self.draw_action() # this is to draw and put it into action.
 
     def draw_action(self):
         turtle.dot() #  This dot is used to draw a circular dot with a particular size, and with some color.
@@ -92,6 +92,5 @@ if __name__ == '__main__': # this is the main function and it is going to all th
     color_circle = CircleFilled(-200,210,50,'green','red') # passing values to the class called circlefilled. Here x = -200 , y = 210 ,radius = 50, 
                                                             # color = green, the color filled is = red, (x,y) are coordinates.
     color_circle.draw() # this is used for the drawing of the circle.
-    turtle.done()
 
-##########################################################################################################################
+############################################################################################################################
